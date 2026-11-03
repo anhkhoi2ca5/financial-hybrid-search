@@ -1,0 +1,12 @@
+{
+  "name": "hybrid-search (Qdrant)",
+  "build": { "dockerfile": "Dockerfile" },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": { "moby": false }
+  },
+  "forwardPorts": [6333, 8000],
+  "portsAttributes": {
+    "6333": { "label": "Qdrant" },
+    "8000": { "label": "Web UI (serve)" }
+  }
+}
